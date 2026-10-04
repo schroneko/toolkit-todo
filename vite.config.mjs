@@ -9,5 +9,5 @@ export default defineConfig(({ mode }) => ({
     ...Object.fromEntries(Object.entries(loadEnv(mode, process.cwd(), 'REACT_APP_')).map(([key, value]) => [`process.env.${key}`, JSON.stringify(value)])),
   },
   build: { outDir: 'build' },
-  test: { globals: true, environment: 'jsdom', setupFiles: ['src/setupTests.ts'] },
+  test: { include: ['src/**/*.{test,spec}.{ts,tsx,js,jsx}'], globals: true, environment: 'jsdom', setupFiles: ['src/setupTests.ts'] },
 }));
