@@ -17,14 +17,17 @@
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.11.0",
     "react-redux": "^7.2.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "fast-glob": "file:./vendor/glob-compat",
+    "micromatch": "file:./vendor/match-compat"
   },
   "scripts": {
     "start": "vite",
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:security": "node --test tests/glob-migration.test.cjs"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -55,5 +58,15 @@
     "@testing-library/jest-dom": "^6.9.1",
     "sass": "^1.99.0",
     "@types/node": "^24.0.0"
+  },
+  "resolutions": {
+    "flatted": "3.4.2",
+    "minimist": "1.2.8",
+    "postcss": "8.5.28",
+    "picomatch": "2.3.2",
+    "minimatch": "3.1.4",
+    "brace-expansion": "1.1.21",
+    "fast-glob": "file:./vendor/glob-compat",
+    "micromatch": "file:./vendor/match-compat"
   }
 }
