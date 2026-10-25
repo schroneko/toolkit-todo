@@ -60,6 +60,7 @@
     "@types/node": "^24.0.0"
   },
   "resolutions": {
+    "micromatch/picomatch": "4.0.7",
     "flatted": "3.4.2",
     "minimist": "1.2.8",
     "postcss": "8.5.28",
@@ -72,6 +73,11 @@
     "@babel/runtime": "7.29.7",
     "@babel/runtime-corejs3": "7.29.7",
     "ajv": "6.14.0",
-    "ansi-regex": "5.0.1"
+    "ansi-regex": "5.0.1",
+    "glob-parent": "5.1.2",
+    "cross-spawn": "7.0.6",
+    "debug": "4.4.3",
+    "word-wrap": "1.2.5",
+    "semver": "7.7.3"
   }
 }
